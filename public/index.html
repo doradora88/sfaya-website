@@ -3,11 +3,2027 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>方濟各青年會</title>
+
+  <title>方濟各青年會｜St. Francis of Assisi’s Young Adults</title>
+
+  <meta
+    name="description"
+    content="方濟各青年會是由香港移居多倫多的天主教青年組成的獨立平信徒信仰團體，以信德、望德、愛德同行。"
+  >
+
+  <meta
+    name="keywords"
+    content="多倫多天主教青年, 廣東話天主教青年, 香港天主教青年, Toronto Catholic Young Adults, Cantonese Catholic Toronto"
+  >
+
+  <style>
+    :root {
+      --cream: #f7f3eb;
+      --paper: #fffdf8;
+      --brown: #665343;
+      --dark-brown: #40362e;
+      --sage: #77836c;
+      --soft-sage: #e6eadf;
+      --toronto-blue: #657f91;
+      --gold: #b59a63;
+      --text: #302d29;
+      --muted: #6e6860;
+      --border: #ddd6ca;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(55, 45, 35, 0.08);
+      --radius: 18px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans TC",
+        "PingFang TC",
+        "Microsoft JhengHei",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      color: var(--text);
+      background: var(--paper);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 253, 248, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 700;
+    }
+
+    /*
+      LOGO PLACEHOLDER
+
+      之後你有正式 Logo 檔案後，
+      可以將呢個 .logo-placeholder
+      換成真正 Logo。
+    */
+
+    .logo-placeholder {
+      width: 48px;
+      height: 48px;
+      border: 2px solid var(--dark-brown);
+      display: grid;
+      place-items: center;
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: var(--dark-brown);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      line-height: 1.25;
+    }
+
+    .brand-cn {
+      font-size: 15px;
+    }
+
+    .brand-en {
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--dark-brown);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--toronto-blue);
+    }
+
+    .language-switch {
+      border: 1px solid var(--brown);
+      background: transparent;
+      color: var(--brown);
+      padding: 7px 13px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 25px;
+      cursor: pointer;
+      color: var(--dark-brown);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(119, 131, 108, 0.14), transparent 28%),
+        radial-gradient(circle at 10% 80%, rgba(101, 127, 145, 0.10), transparent 25%),
+        var(--cream);
+      padding: 105px 0 115px;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-logo {
+      width: 105px;
+      height: 105px;
+      border: 2px solid var(--dark-brown);
+      margin: 0 auto 30px;
+      display: grid;
+      place-items: center;
+      color: var(--dark-brown);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+
+    .eyebrow {
+      color: var(--sage);
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-family:
+        Georgia,
+        "Noto Serif TC",
+        "Songti TC",
+        serif;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.15;
+      font-weight: 500;
+      color: var(--dark-brown);
+      margin-bottom: 14px;
+    }
+
+    .hero-en {
+      font-family: Georgia, serif;
+      font-size: clamp(17px, 2vw, 23px);
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .hero-tagline {
+      font-size: 18px;
+      color: var(--brown);
+      margin-bottom: 35px;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 23px;
+      border-radius: 999px;
+      font-size: 14px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background: var(--brown);
+      color: white;
+      border: 1px solid var(--brown);
+    }
+
+    .button-primary:hover {
+      background: var(--dark-brown);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--brown);
+      border: 1px solid var(--brown);
+    }
+
+    .button-secondary:hover {
+      background: rgba(102, 83, 67, 0.07);
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    .section-header.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-label {
+      color: var(--sage);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family:
+        Georgia,
+        "Noto Serif TC",
+        "Songti TC",
+        serif;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.25;
+      color: var(--dark-brown);
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: var(--paper);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: var(--muted);
+    }
+
+    .about-note {
+      background: var(--soft-sage);
+      padding: 30px;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--sage);
+    }
+
+    .about-note strong {
+      color: var(--dark-brown);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* =========================
+       FAITH / MISSION
+    ========================= */
+
+    .faith {
+      background: var(--cream);
+    }
+
+    .faith-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .faith-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 35px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .faith-number {
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .faith-card h3 {
+      font-family:
+        Georgia,
+        "Noto Serif TC",
+        "Songti TC",
+        serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: var(--dark-brown);
+      margin-bottom: 16px;
+    }
+
+    .faith-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       EVENTS
+    ========================= */
+
+    .events {
+      background: var(--paper);
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .event-card {
+      border-top: 4px solid var(--brown);
+      background: var(--cream);
+      padding: 30px;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .event-frequency {
+      color: var(--sage);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .event-card h3 {
+      color: var(--dark-brown);
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .event-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .event-extra {
+      margin-top: 35px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .event-extra h3 {
+      margin-bottom: 15px;
+      color: var(--dark-brown);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .tag {
+      padding: 7px 13px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--brown);
+      background: var(--paper);
+    }
+
+    /* =========================
+       CALENDAR
+    ========================= */
+
+    .calendar {
+      background: var(--soft-sage);
+    }
+
+    .calendar-box {
+      background: var(--paper);
+      border-radius: var(--radius);
+      padding: 45px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .calendar-box h3 {
+      font-family: Georgia, serif;
+      color: var(--dark-brown);
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .calendar-box p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       PATRON SAINT
+    ========================= */
+
+    .patron {
+      background: var(--paper);
+    }
+
+    .patron-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .patron-symbol {
+      width: min(100%, 330px);
+      aspect-ratio: 1;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      margin: auto;
+      display: grid;
+      place-items: center;
+      background: var(--cream);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .patron-symbol span {
+      font-family: Georgia, serif;
+      font-size: 24px;
+      color: var(--brown);
+    }
+
+    .patron-text p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .quote {
+      margin-top: 28px;
+      padding: 22px 25px;
+      border-left: 3px solid var(--gold);
+      background: var(--cream);
+      font-family: Georgia, serif;
+      color: var(--brown);
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-placeholder {
+      min-height: 210px;
+      border: 1px solid var(--border);
+      background: var(--paper);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--muted);
+      padding: 20px;
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
+    .links {
+      background: var(--paper);
+    }
+
+    .link-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .link-item {
+      border: 1px solid var(--border);
+      padding: 20px 22px;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      transition: all 0.2s ease;
+    }
+
+    .link-item:hover {
+      border-color: var(--sage);
+      transform: translateY(-2px);
+    }
+
+    .link-item strong {
+      color: var(--dark-brown);
+    }
+
+    .link-item span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 60px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .contact-form {
+      background: var(--paper);
+      padding: 35px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      color: var(--dark-brown);
+      margin-bottom: 7px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      background: #fff;
+      color: var(--text);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--sage);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--dark-brown);
+      color: rgba(255,255,255,0.85);
+      padding: 55px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: rgba(255,255,255,0.7);
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 7px;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 25px;
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+    }
+
+    /* =========================
+       ENGLISH MODE
+    ========================= */
+
+    body.english .zh {
+      display: none;
+    }
+
+    body:not(.english) .en {
+      display: none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--border);
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .about-grid,
+      .patron-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faith-grid,
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .hero {
+        padding: 80px 0 85px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero-logo {
+        width: 85px;
+        height: 85px;
+      }
+
+      .calendar-box {
+        padding: 30px 20px;
+      }
+
+      .contact-form {
+        padding: 25px 20px;
+      }
+
+      .gallery-grid,
+      .link-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-en {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>方濟各青年會</h1>
-  <p>St. Francis of Assisi’s Young Adults</p>
-  <p>網站正在建立中。</p>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#home" class="brand">
+        <div class="logo-placeholder">
+          LOGO
+        </div>
+
+        <div class="brand-text">
+          <div class="brand-cn zh">方濟各青年會</div>
+          <div class="brand-cn en">St. Francis of Assisi’s Young Adults</div>
+          <div class="brand-en">Toronto Catholic Young Adults</div>
+        </div>
+      </a>
+
+      <div class="nav-right">
+
+        <button
+          class="language-switch"
+          id="languageToggle"
+          type="button"
+          aria-label="Switch language"
+        >
+          EN
+        </button>
+
+        <button
+          class="mobile-menu"
+          id="mobileMenu"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+      </div>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+
+          <li>
+            <a href="#about" class="zh">關於我們</a>
+            <a href="#about" class="en">About</a>
+          </li>
+
+          <li>
+            <a href="#faith" class="zh">使命與路向</a>
+            <a href="#faith" class="en">Our Faith</a>
+          </li>
+
+          <li>
+            <a href="#events" class="zh">活動</a>
+            <a href="#events" class="en">Activities</a>
+          </li>
+
+          <li>
+            <a href="#patron" class="zh">主保聖人</a>
+            <a href="#patron" class="en">Patron Saint</a>
+          </li>
+
+          <li>
+            <a href="#gallery" class="zh">相簿</a>
+            <a href="#gallery" class="en">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="zh">聯絡我們</a>
+            <a href="#contact" class="en">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <!-- Logo placeholder -->
+          <div class="hero-logo">
+            LOGO
+          </div>
+
+          <div class="eyebrow zh">
+            多倫多・香港天主教青年
+          </div>
+
+          <div class="eyebrow en">
+            TORONTO · CATHOLIC YOUNG ADULTS
+          </div>
+
+          <h1 class="zh">
+            方濟各青年會
+          </h1>
+
+          <h1 class="en">
+            St. Francis of Assisi’s Young Adults
+          </h1>
+
+          <div class="hero-en en">
+            A Catholic young adults community in Toronto
+          </div>
+
+          <p class="hero-tagline zh">
+            在多倫多，以信德、望德、愛德同行
+          </p>
+
+          <p class="hero-tagline en">
+            Walking together in faith, hope, and charity in Toronto.
+          </p>
+
+          <div class="button-row">
+
+            <a href="#events" class="button button-primary zh">
+              查看活動
+            </a>
+
+            <a href="#events" class="button button-primary en">
+              View Activities
+            </a>
+
+            <a href="#about" class="button button-secondary zh">
+              認識我們
+            </a>
+
+            <a href="#about" class="button button-secondary en">
+              About Us
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div>
+
+            <div class="section-header">
+
+              <div class="section-label zh">
+                關於我們
+              </div>
+
+              <div class="section-label en">
+                ABOUT US
+              </div>
+
+              <h2 class="section-title zh">
+                在新的城市，<br>
+                一起活出信仰
+              </h2>
+
+              <h2 class="section-title en">
+                Living our faith<br>
+                in a new city
+              </h2>
+
+            </div>
+
+            <div class="about-text">
+
+              <p class="zh">
+                方濟各青年會是一個由香港移居多倫多的天主教青年組成的獨立平信徒信仰團體。
+                我們以廣東話為主要語言，在加拿大這個新的生活環境中，一起尋找、分享及活出天主教信仰。
+              </p>
+
+              <p class="en">
+                St. Francis of Assisi’s Young Adults is an independent lay Catholic faith community
+                formed by young adults who have immigrated from Hong Kong to Toronto.
+                Cantonese is our primary language as we seek to live and share our Catholic faith together.
+              </p>
+
+              <p class="zh">
+                我們並不隸屬於任何堂區，而是透過團體生活、祈禱、聖言、禮儀及服務，
+                彼此陪伴，在多倫多的生活中繼續跟隨基督。
+              </p>
+
+              <p class="en">
+                We are not affiliated with any parish. Through community life, prayer,
+                Scripture, liturgy and service, we accompany one another in following Christ in Toronto.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-note">
+
+            <strong class="zh">
+              我們的會員
+            </strong>
+
+            <strong class="en">
+              Who We Welcome
+            </strong>
+
+            <p class="zh">
+              18 歲或以上、天主教徒，以及願意跟隨基督、在團體中一起成長的青年。
+            </p>
+
+            <p class="en">
+              Catholic young adults aged 18 or above who seek to follow Christ
+              and grow together in faith.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAITH / MISSION
+    ========================= -->
+
+    <section class="faith" id="faith">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="section-label zh">
+            使命與路向
+          </div>
+
+          <div class="section-label en">
+            OUR MISSION
+          </div>
+
+          <h2 class="section-title zh">
+            信德・望德・愛德
+          </h2>
+
+          <h2 class="section-title en">
+            Faith · Hope · Charity
+          </h2>
+
+          <p class="section-description zh">
+            我們以信仰生活為中心，在團體內彼此陪伴，
+            並將所領受的愛帶到日常生活及社會。
+          </p>
+
+          <p class="section-description en">
+            Our community is rooted in faith,
+            strengthened by hope, and expressed through charity.
+          </p>
+
+        </div>
+
+
+        <div class="faith-grid">
+
+          <article class="faith-card">
+
+            <div class="faith-number">01</div>
+
+            <h3 class="zh">信德</h3>
+            <h3 class="en">Faith</h3>
+
+            <p class="zh">
+              重新燃點信仰之火，通過聖言及禮儀，
+              獲取信德的奧蹟。
+            </p>
+
+            <p class="en">
+              To rekindle the fire of faith through Scripture
+              and the liturgy, entering more deeply into the mystery of faith.
+            </p>
+
+          </article>
+
+
+          <article class="faith-card">
+
+            <div class="faith-number">02</div>
+
+            <h3 class="zh">望德</h3>
+            <h3 class="en">Hope</h3>
+
+            <p class="zh">
+              通過團體信仰生活，在這團體的愛內，
+              活現望德的神效。
+            </p>
+
+            <p class="en">
+              Through community life, to experience and embody
+              the living power of Christian hope in love.
+            </p>
+
+          </article>
+
+
+          <article class="faith-card">
+
+            <div class="faith-number">03</div>
+
+            <h3 class="zh">愛德</h3>
+            <h3 class="en">Charity</h3>
+
+            <p class="zh">
+              虔誠事奉萬軍上主，愛上主所愛的人，
+              擁抱愛德的根源。
+            </p>
+
+            <p class="en">
+              To serve the Lord of hosts faithfully,
+              love those whom God loves, and embrace the source of charity.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVENTS
+    ========================= -->
+
+    <section class="events" id="events">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label zh">
+            常設活動
+          </div>
+
+          <div class="section-label en">
+            REGULAR ACTIVITIES
+          </div>
+
+          <h2 class="section-title zh">
+            一起相聚，一起成長
+          </h2>
+
+          <h2 class="section-title en">
+            Gathering, praying, growing
+          </h2>
+
+          <p class="section-description zh">
+            我們每月有固定的信仰及團體活動。
+            詳細時間及地點會於活動日曆公布。
+          </p>
+
+          <p class="section-description en">
+            We meet regularly for faith formation and community life.
+            Details are published in our activity calendar.
+          </p>
+
+        </div>
+
+
+        <div class="events-grid">
+
+          <article class="event-card">
+
+            <div class="event-frequency zh">
+              每月第二個星期五
+            </div>
+
+            <div class="event-frequency en">
+              SECOND FRIDAY
+            </div>
+
+            <h3 class="zh">
+              福音研讀
+            </h3>
+
+            <h3 class="en">
+              Gospel Study
+            </h3>
+
+            <p class="zh">
+              一起閱讀福音、分享信仰，
+              在聖言中聆聽天主的邀請。
+            </p>
+
+            <p class="en">
+              Reading and reflecting on the Gospel together,
+              listening for God's invitation through Scripture.
+            </p>
+
+          </article>
+
+
+          <article class="event-card">
+
+            <div class="event-frequency zh">
+              每月第三個星期日
+            </div>
+
+            <div class="event-frequency en">
+              THIRD SUNDAY
+            </div>
+
+            <h3 class="zh">
+              聯誼活動
+            </h3>
+
+            <h3 class="en">
+              Fellowship
+            </h3>
+
+            <p class="zh">
+              在多倫多不同地方相聚，
+              建立友誼，分享生活，活出團體精神。
+            </p>
+
+            <p class="en">
+              Gathering at different places around Toronto
+              to build friendships and share life together.
+            </p>
+
+          </article>
+
+
+          <article class="event-card">
+
+            <div class="event-frequency zh">
+              每月第四個星期五
+            </div>
+
+            <div class="event-frequency en">
+              FOURTH FRIDAY
+            </div>
+
+            <h3 class="zh">
+              主日經文導讀
+            </h3>
+
+            <h3 class="en">
+              Sunday Scripture Reflection
+            </h3>
+
+            <p class="zh">
+              預備即將來臨的主日，
+              透過經文反思天主在我們生命中的臨在。
+            </p>
+
+            <p class="en">
+              Preparing for Sunday through Scripture,
+              reflecting on God's presence in our lives.
+            </p>
+
+          </article>
+
+        </div>
+
+
+        <div class="event-extra">
+
+          <h3 class="zh">
+            非常設活動
+          </h3>
+
+          <h3 class="en">
+            Occasional Activities
+          </h3>
+
+          <div class="tag-list">
+
+            <span class="tag zh">愛德服務</span>
+            <span class="tag en">Charity & Service</span>
+
+            <span class="tag zh">避靜</span>
+            <span class="tag en">Retreats</span>
+
+            <span class="tag zh">主保瞻禮</span>
+            <span class="tag en">Patronal Feast</span>
+
+            <span class="tag zh">That Blessed Upper Room Reflection</span>
+            <span class="tag en">That Blessed Upper Room Reflection</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALENDAR
+    ========================= -->
+
+    <section class="calendar">
+
+      <div class="container">
+
+        <div class="calendar-box">
+
+          <h3 class="zh">
+            活動日曆
+          </h3>
+
+          <h3 class="en">
+            Activity Calendar
+          </h3>
+
+          <p class="zh">
+            查看最新活動日期、時間及地點。
+          </p>
+
+          <p class="en">
+            View upcoming dates, times and locations.
+          </p>
+
+          <!--
+            下一步會將 Google Calendar 嵌入呢度。
+            你之後可以自己更新 Google Calendar，
+            網站會自動顯示最新活動。
+          -->
+
+          <a href="#contact" class="button button-primary zh">
+            即將推出
+          </a>
+
+          <a href="#contact" class="button button-primary en">
+            Coming Soon
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PATRON SAINT
+    ========================= -->
+
+    <section class="patron" id="patron">
+
+      <div class="container">
+
+        <div class="patron-grid">
+
+          <div>
+
+            <div class="patron-symbol">
+              <span>
+                San Francesco<br>
+                d'Assisi
+              </span>
+            </div>
+
+          </div>
+
+
+          <div class="patron-text">
+
+            <div class="section-label zh">
+              主保聖人
+            </div>
+
+            <div class="section-label en">
+              OUR PATRON
+            </div>
+
+            <h2 class="section-title zh">
+              聖方濟各・亞西西
+            </h2>
+
+            <h2 class="section-title en">
+              St. Francis of Assisi
+            </h2>
+
+            <p class="zh">
+              聖方濟各以簡樸、喜樂、和平及對天主受造界的愛而聞名。
+              他以福音為生活的核心，並以貧窮、服務及與眾人修和的精神跟隨基督。
+            </p>
+
+            <p class="en">
+              St. Francis of Assisi is remembered for his simplicity,
+              joy, peace, love for creation, and radical commitment to the Gospel.
+              His life was marked by service, humility and a deep desire to follow Christ.
+            </p>
+
+            <p class="zh">
+              對我們而言，聖方濟各提醒我們：
+              信仰不只是思想或知識，更是在日常生活中活出福音。
+            </p>
+
+            <p class="en">
+              For us, St. Francis reminds us that faith is not merely something
+              we learn or think about, but something we live through everyday life.
+            </p>
+
+            <div class="quote zh">
+              「主，請使我成為祢的和平工具。」
+            </div>
+
+            <div class="quote en">
+              “Lord, make me an instrument of your peace.”
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section class="gallery" id="gallery">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="section-label zh">
+            相簿
+          </div>
+
+          <div class="section-label en">
+            GALLERY
+          </div>
+
+          <h2 class="section-title zh">
+            我們一起走過的足跡
+          </h2>
+
+          <h2 class="section-title en">
+            Moments along the way
+          </h2>
+
+          <p class="section-description zh">
+            活動、祈禱、服務與在多倫多一起生活的片段。
+          </p>
+
+          <p class="section-description en">
+            Moments from our activities, prayer, service and life together in Toronto.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-placeholder zh">
+            相片位置
+          </div>
+
+          <div class="gallery-placeholder zh">
+            相片位置
+          </div>
+
+          <div class="gallery-placeholder zh">
+            相片位置
+          </div>
+
+          <div class="gallery-placeholder zh">
+            相片位置
+          </div>
+
+          <div class="gallery-placeholder zh">
+            相片位置
+          </div>
+
+          <div class="gallery-placeholder zh">
+            相片位置
+          </div>
+
+          <div class="gallery-placeholder en">
+            Photo
+          </div>
+
+          <div class="gallery-placeholder en">
+            Photo
+          </div>
+
+          <div class="gallery-placeholder en">
+            Photo
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TORONTO CATHOLIC LINKS
+    ========================= -->
+
+    <section class="links">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label zh">
+            多倫多天主教團體連結
+          </div>
+
+          <div class="section-label en">
+            TORONTO CATHOLIC LINKS
+          </div>
+
+          <h2 class="section-title zh">
+            一起連結更大的教會
+          </h2>
+
+          <h2 class="section-title en">
+            Connected to the wider Church
+          </h2>
+
+          <p class="section-description zh">
+            我們會整理多倫多及加拿大的天主教資源，
+            方便青年尋找堂區、培育、服務及其他信仰團體。
+          </p>
+
+          <p class="section-description en">
+            A collection of Catholic resources in Toronto and Canada,
+            including parishes, formation, service and Catholic communities.
+          </p>
+
+        </div>
+
+
+        <div class="link-list">
+
+          <a href="#" class="link-item">
+
+            <div>
+              <strong class="zh">多倫多總教區</strong>
+              <strong class="en">Archdiocese of Toronto</strong>
+              <br>
+              <span class="zh">官方網站</span>
+              <span class="en">Official website</span>
+            </div>
+
+            <span>↗</span>
+
+          </a>
+
+
+          <a href="#" class="link-item">
+
+            <div>
+              <strong class="zh">天主教堂區</strong>
+              <strong class="en">Catholic Parishes</strong>
+              <br>
+              <span class="zh">尋找堂區及彌撒資訊</span>
+              <span class="en">Parishes and Mass information</span>
+            </div>
+
+            <span>↗</span>
+
+          </a>
+
+
+          <a href="#" class="link-item">
+
+            <div>
+              <strong class="zh">天主教青年團體</strong>
+              <strong class="en">Catholic Young Adult Communities</strong>
+              <br>
+              <span class="zh">青年信仰生活</span>
+              <span class="en">Young adult faith communities</span>
+            </div>
+
+            <span>↗</span>
+
+          </a>
+
+
+          <a href="#" class="link-item">
+
+            <div>
+              <strong class="zh">華人天主教團體</strong>
+              <strong class="en">Chinese Catholic Communities</strong>
+              <br>
+              <span class="zh">華人信仰團體及資源</span>
+              <span class="en">Chinese Catholic communities and resources</span>
+            </div>
+
+            <span>↗</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <div class="section-label zh">
+              聯絡我們
+            </div>
+
+            <div class="section-label en">
+              CONTACT
+            </div>
+
+            <h2 class="section-title zh">
+              歡迎與我們聯絡
+            </h2>
+
+            <h2 class="section-title en">
+              We'd love to hear from you
+            </h2>
+
+            <p class="zh">
+              無論你是剛來到多倫多，還是已經在這裡生活了一段時間，
+              如果你希望認識其他天主教青年，歡迎與我們聯絡。
+            </p>
+
+            <p class="en">
+              Whether you are new to Toronto or have been here for years,
+              if you are looking to meet other Catholic young adults,
+              you are welcome to reach out.
+            </p>
+
+            <p class="zh">
+              你亦可以透過 Instagram 關注我們最新活動。
+            </p>
+
+            <p class="en">
+              You can also follow us on Instagram for upcoming activities.
+            </p>
+
+            <!-- Instagram link will be added later -->
+
+          </div>
+
+
+          <form class="contact-form">
+
+            <div class="form-group">
+
+              <label class="zh" for="name">
+                姓名
+              </label>
+
+              <label class="en" for="name">
+                Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="你的姓名"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label class="zh" for="email">
+                電郵
+              </label>
+
+              <label class="en" for="email">
+                Email
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label class="zh" for="subject">
+                主題
+              </label>
+
+              <label class="en" for="subject">
+                Subject
+              </label>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="主題"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label class="zh" for="message">
+                訊息
+              </label>
+
+              <label class="en" for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="請輸入訊息"
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="button button-primary"
+            >
+              <span class="zh">傳送訊息</span>
+              <span class="en">Send Message</span>
+            </button>
+
+
+            <p class="form-note zh">
+              聯絡表格稍後會連接至電郵通知服務。
+            </p>
+
+            <p class="form-note en">
+              This form will be connected to an email notification service.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h3 class="zh">
+            方濟各青年會
+          </h3>
+
+          <h3 class="en">
+            St. Francis of Assisi’s Young Adults
+          </h3>
+
+          <p class="zh">
+            在多倫多，以信德、望德、愛德同行。
+          </p>
+
+          <p class="en">
+            Walking together in faith, hope, and charity in Toronto.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="zh">網站</h3>
+          <h3 class="en">Website</h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#about">
+                <span class="zh">關於我們</span>
+                <span class="en">About</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#events">
+                <span class="zh">活動</span>
+                <span class="en">Activities</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#gallery">
+                <span class="zh">相簿</span>
+                <span class="en">Gallery</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                <span class="zh">聯絡我們</span>
+                <span class="en">Contact</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>Social</h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#" target="_blank" rel="noopener">
+                Instagram
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © <span id="year"></span> St. Francis of Assisi’s Young Adults.
+        All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* -------------------------
+       LANGUAGE SWITCH
+    ------------------------- */
+
+    const languageToggle = document.getElementById("languageToggle");
+
+    languageToggle.addEventListener("click", function () {
+
+      document.body.classList.toggle("english");
+
+      if (document.body.classList.contains("english")) {
+
+        document.documentElement.lang = "en";
+        languageToggle.textContent = "中";
+
+      } else {
+
+        document.documentElement.lang = "zh-Hant";
+        languageToggle.textContent = "EN";
+
+      }
+
+    });
+
+
+    /* -------------------------
+       MOBILE MENU
+    ------------------------- */
+
+    const mobileMenu = document.getElementById("mobileMenu");
+    const navLinks = document.getElementById("navLinks");
+
+    mobileMenu.addEventListener("click", function () {
+
+      navLinks.classList.toggle("active");
+
+    });
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        navLinks.classList.remove("active");
+
+      });
+
+    });
+
+
+    /* -------------------------
+       CURRENT YEAR
+    ------------------------- */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* -------------------------
+       CONTACT FORM
+       -------------------------
+
+       暫時阻止真正提交。
+       下一步會接駁 email form service。
+    */
+
+    const contactForm = document.querySelector(".contact-form");
+
+    contactForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert(
+        document.body.classList.contains("english")
+          ? "Thank you! The contact form will be connected soon."
+          : "多謝你！聯絡表格稍後會正式啟用。"
+      );
+
+    });
+
+  </script>
+
 </body>
 </html>
