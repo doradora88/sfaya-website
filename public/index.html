@@ -137,6 +137,9 @@
       gap: 24px;
       list-style: none;
       font-size: 14px;
+      margin-left: auto;
+    }
+    
     }
 
     .nav-links a {
@@ -149,14 +152,23 @@
     }
 
     .language-switch {
-      border: 1px solid var(--brown);
+      border: 0;
       background: transparent;
       color: var(--brown);
-      padding: 7px 13px;
-      border-radius: 999px;
+      padding: 0;
+      border-radius: 0;
       cursor: pointer;
       font-size: 13px;
+      white-space: nowrap;
     }
+
+    .language-switch-item {
+      list-style: none;
+    }
+
+.language-switch:hover {
+  color: var(--toronto-blue);
+}
 
     .mobile-menu {
       display: none;
@@ -843,26 +855,16 @@
 
       <div class="nav-right">
 
-        <button
-          class="language-switch"
-          id="languageToggle"
-          type="button"
-          aria-label="Switch language"
-        >
-          EN
-        </button>
+  <button
+    class="mobile-menu"
+    id="mobileMenu"
+    type="button"
+    aria-label="Open menu"
+  >
+    ☰
+  </button>
 
-        <button
-          class="mobile-menu"
-          id="mobileMenu"
-          type="button"
-          aria-label="Open menu"
-        >
-          ☰
-        </button>
-
-      </div>
-
+</div>
       <nav>
         <ul class="nav-links" id="navLinks">
 
@@ -894,6 +896,17 @@
           <li>
             <a href="#contact" class="zh">聯絡我們</a>
             <a href="#contact" class="en">Contact</a>
+          </li>
+
+          <li class="language-switch-item">
+            <button
+              class="language-switch"
+              id="languageToggle"
+              type="button"
+              aria-label="Switch language"
+            >
+              EN
+            </button>
           </li>
 
         </ul>
