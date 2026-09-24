@@ -1715,7 +1715,9 @@
                 name="name"
                 required
                 placeholder="你的姓名"
-              >
+                data-placeholder-zh="你的姓名"
+                data-placeholder-en="Your name"
+              />
 
             </div>
 
@@ -1757,7 +1759,9 @@
                 name="subject"
                 required
                 placeholder="主題"
-              >
+                data-placeholder-zh="主題"
+                data-placeholder-en="Subject"
+/>
 
             </div>
 
@@ -1777,6 +1781,8 @@
                 name="message"
                 required
                 placeholder="請輸入訊息"
+                data-placeholder-zh="請輸入訊息"
+                data-placeholder-en="Enter your message"
               ></textarea>
 
             </div>
@@ -1934,6 +1940,21 @@
         languageToggle.textContent = "EN";
 
       }
+
+      function updateFormPlaceholders() {
+        const isEnglish = document.body.classList.contains("english");
+
+        document
+          .querySelectorAll("[data-placeholder-zh][data-placeholder-en]")
+          .forEach(function (field) {
+            field.placeholder = isEnglish
+              ? field.dataset.placeholderEn
+              : field.dataset.placeholderZh;
+          });
+      }
+
+// Set the correct placeholders when the page first loads.
+updateFormPlaceholders();
 
     });
 
