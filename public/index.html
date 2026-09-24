@@ -1575,10 +1575,15 @@
 
         <div class="link-list">
 
-          <a href="#" class="link-item">
-
+          <!-- Archdiocese of Toronto -->
+          <a
+            href="https://www.archtoronto.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-item"
+          >
             <div>
-              <strong class="zh">多倫多總教區</strong>
+              <strong class="zh">天主教多倫多總教區</strong>
               <strong class="en">Archdiocese of Toronto</strong>
               <br>
               <span class="zh">官方網站</span>
@@ -1586,55 +1591,70 @@
             </div>
 
             <span>↗</span>
-
           </a>
 
 
-          <a href="#" class="link-item">
+  <!-- Cantonese Catholic Parishes -->
+  <a
+    href="https://www.archtoronto.org/en/contact-us/find-a-parish/?parish=&address=&city=&postalCode=&massLanguage=Cantonese"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="link-item"
+  >
+    <div>
+      <strong class="zh">多倫多廣東話天主教堂區</strong>
+      <strong class="en">Cantonese Catholic Parishes in Toronto</strong>
+      <br>
+      <span class="zh">堂區及彌撒資訊</span>
+      <span class="en">Parishes and Mass information</span>
+    </div>
 
-            <div>
-              <strong class="zh">多倫多廣東話天主教堂區</strong>
-              <strong class="en">Cantonese Catholic Parishes in Toronto</strong>
-              <br>
-              <span class="zh">堂區及彌撒資訊</span>
-              <span class="en">Parishes and Mass information</span>
-            </div>
-
-            <span>↗</span>
-
-          </a>
-
-
-          <a href="#" class="link-item">
-
-            <div>
-              <strong class="zh">香港天主教教區</strong>
-              <strong class="en">Diocese of Hong Kong</strong>
-              <br>
-              <span class="zh">官方網站</span>
-              <span class="en">Official website</span>
-            </div>
-
-            <span>↗</span>
-
-          </a>
+    <span>↗</span>
+  </a>
 
 
-          <a href="#" class="link-item">
+  <!-- Diocese of Hong Kong -->
+  <a
+    href="https://catholic.org.hk/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="link-item"
+    data-zh-url="https://catholic.org.hk/"
+    data-en-url="https://catholic.org.hk/en"
+  >
+    <div>
+      <strong class="zh">天主教香港教區</strong>
+      <strong class="en">The Catholic Diocese of Hong Kong</strong>
+      <br>
+      <span class="zh">官方網站</span>
+      <span class="en">Official website</span>
+    </div>
 
-            <div>
-              <strong class="zh">祈禱資源</strong>
-              <strong class="en">Prayer Resources</strong>
-              <br>
-              <span class="zh">應常歡樂，不斷祈禱，事事感謝</span>
-              <span class="en">Rejoice always. Pray without ceasing</span>
-            </div>
+    <span>↗</span>
+  </a>
 
-            <span>↗</span>
 
-          </a>
+  <!-- Prayer Resources -->
+  <a
+    href="https://www.ccreadbible.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="link-item"
+    data-zh-url="https://www.ccreadbible.org/"
+    data-en-url="https://livingwithchrist.ca/"
+  >
+    <div>
+      <strong class="zh">祈禱資源</strong>
+      <strong class="en">Prayer Resources</strong>
+      <br>
+      <span class="zh">應常歡樂，不斷祈禱，事事感謝</span>
+      <span class="en">Rejoice always. Pray without ceasing</span>
+    </div>
 
-        </div>
+    <span>↗</span>
+  </a>
+
+</div>
 
       </div>
 
@@ -1951,7 +1971,23 @@
             : field.dataset.placeholderZh;
 
         });
-}
+    }
+
+    function updateLanguageLinks() {
+
+      const isEnglish =
+        document.body.classList.contains("english");
+
+      document
+        .querySelectorAll("[data-zh-url][data-en-url]")
+        .forEach(function (link) {
+
+          link.href = isEnglish
+            ? link.dataset.enUrl
+            : link.dataset.zhUrl;
+
+        });
+    }
 
 
 languageToggle.addEventListener("click", function () {
@@ -1971,12 +2007,14 @@ languageToggle.addEventListener("click", function () {
   }
 
   updateFormPlaceholders();
+  updateLanguageLinks();
 
 });
 
 
 /* Set correct placeholders when page loads */
 updateFormPlaceholders();
+updateLanguageLinks();
 
 
     /* -------------------------
