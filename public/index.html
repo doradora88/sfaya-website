@@ -1697,7 +1697,17 @@
           </div>
 
 
-          <form class="contact-form">
+          <form
+            class="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <!-- Web3Forms -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="27162f93-71fc-4313-af5e-52bd14b1603f"
+            >
 
             <div class="form-group">
 
@@ -1798,11 +1808,11 @@
 
 
             <p class="form-note zh">
-              聯絡表格稍後會連接至電郵通知服務。
+              你的訊息會直接傳送到我們的電郵。
             </p>
 
             <p class="form-note en">
-              This form will be connected to an email notification service.
+              Your message will be sent directly to our email.
             </p>
 
           </form>
@@ -1925,37 +1935,46 @@
 
     const languageToggle = document.getElementById("languageToggle");
 
-    languageToggle.addEventListener("click", function () {
+    function updateFormPlaceholders() {
 
-      document.body.classList.toggle("english");
+      const isEnglish =
+        document.body.classList.contains("english");
 
-      if (document.body.classList.contains("english")) {
+      document
+        .querySelectorAll("[data-placeholder-zh][data-placeholder-en]")
+        .forEach(function (field) {
 
-        document.documentElement.lang = "en";
-        languageToggle.textContent = "中";
+          field.placeholder = isEnglish
+            ? field.dataset.placeholderEn
+            : field.dataset.placeholderZh;
 
-      } else {
+        });
+}
 
-        document.documentElement.lang = "zh-Hant";
-        languageToggle.textContent = "EN";
 
-      }
+languageToggle.addEventListener("click", function () {
 
-      function updateFormPlaceholders() {
-        const isEnglish = document.body.classList.contains("english");
+  document.body.classList.toggle("english");
 
-        document
-          .querySelectorAll("[data-placeholder-zh][data-placeholder-en]")
-          .forEach(function (field) {
-            field.placeholder = isEnglish
-              ? field.dataset.placeholderEn
-              : field.dataset.placeholderZh;
-          });
-      }
+  if (document.body.classList.contains("english")) {
 
-// Set the correct placeholders when the page first loads.
+    document.documentElement.lang = "en";
+    languageToggle.textContent = "中";
+
+  } else {
+
+    document.documentElement.lang = "zh-Hant";
+    languageToggle.textContent = "EN";
+
+  }
+
+  updateFormPlaceholders();
+
+});
+
+
+/* Set correct placeholders when page loads */
 updateFormPlaceholders();
-
     });
 
 
@@ -1992,27 +2011,6 @@ updateFormPlaceholders();
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
-
-    /* -------------------------
-       CONTACT FORM
-       -------------------------
-
-       暫時阻止真正提交。
-       下一步會接駁 email form service。
-    */
-
-    const contactForm = document.querySelector(".contact-form");
-
-    contactForm.addEventListener("submit", function(event) {
-
-      event.preventDefault();
-
-      alert(
-        document.body.classList.contains("english")
-          ? "Thank you! The contact form will be connected soon."
-          : "多謝你！聯絡表格稍後會正式啟用。"
-      );
 
     });
 
