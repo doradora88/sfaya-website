@@ -491,6 +491,19 @@
       box-shadow: var(--shadow);
     }
 
+    .calendar-embed {
+      margin-top: 30px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .calendar-embed iframe {
+      width: 100%;
+      min-height: 600px;
+      border: 0;
+    }
+
     .calendar-box h3 {
       font-family: Georgia, serif;
       color: var(--dark-brown);
@@ -813,6 +826,10 @@
 
       .calendar-box {
         padding: 30px 20px;
+      }
+
+      .calendar-embed iframe {
+        min-height: 550px;
       }
 
       .contact-form {
@@ -1278,7 +1295,7 @@
             </h3>
 
             <h3 class="en">
-              Sunday Scripture Reflection
+              Sunday Scripture Study
             </h3>
 
             <p class="zh">
@@ -1353,19 +1370,17 @@
             View upcoming dates, times and locations.
           </p>
 
-          <!--
-            下一步會將 Google Calendar 嵌入呢度。
-            你之後可以自己更新 Google Calendar，
-            網站會自動顯示最新活動。
-          -->
-
-          <a href="#contact" class="button button-primary zh">
-            即將推出
-          </a>
-
-          <a href="#contact" class="button button-primary en">
-            Coming Soon
-          </a>
+          <div class="calendar-embed">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=500&wkst=1&ctz=America%2FToronto&showPrint=0&mode=MONTH&title&src=M2MzYjA3NmM3OTYxOWFmMGI0M2NlNGE5YzQ1Y2Q5MGIyODU0MzdiM2ExNTg3N2FjZjNhZmViNTAzMzJjZTU0M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23616161" 
+              style="border:solid 1px #777" 
+              width="500" 
+              height="500"
+              frameborder="0"
+              scrolling="no">
+            </iframe>
+          
+          </div>
 
         </div>
 
